@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Position, Direction, GameState } from '../types/game';
 
-const BOARD_SIZE = 20;
+const BOARD_SIZE = 15;
 const INITIAL_SNAKE: Position[] = [
-  { row: 10, col: 10 },
-  { row: 10, col: 9 },
-  { row: 10, col: 8 },
+  { row: 7, col: 7 },
+  { row: 7, col: 6 },
+  { row: 7, col: 5 },
 ];
 
 const SPEED_MAP = {

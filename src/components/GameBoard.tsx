@@ -37,7 +37,7 @@ export default function GameBoard({ board, snake, food, gameState }: GameBoardPr
       )}
 
       {/* Game Grid */}
-      <div className="grid grid-cols-20 gap-[1px] bg-gray-700 p-2 rounded-lg">
+      <div className="inline-grid grid-cols-20 gap-0 bg-gray-800 p-1 rounded-lg border-4 border-gray-700">
         {board.map((row, rowIndex) => (
           row.map((_, colIndex) => {
             const head = isSnakeHead(rowIndex, colIndex);
@@ -48,11 +48,11 @@ export default function GameBoard({ board, snake, food, gameState }: GameBoardPr
               <div
                 key={`${rowIndex}-${colIndex}`}
                 className={`
-                  aspect-square game-cell rounded-sm
-                  ${head ? 'bg-gradient-to-br from-green-400 to-green-600 shadow-lg shadow-green-500/50' : ''}
-                  ${body ? 'bg-green-500' : ''}
-                  ${foodCell ? 'bg-red-500 animate-pulse-fast shadow-lg shadow-red-500/50' : ''}
-                  ${!head && !body && !foodCell ? 'bg-gray-800' : ''}
+                  w-5 h-5
+                  ${head ? 'bg-green-400 border-2 border-green-600' : ''}
+                  ${body ? 'bg-green-500 border border-green-600' : ''}
+                  ${foodCell ? 'bg-red-500 rounded-full' : ''}
+                  ${!head && !body && !foodCell ? 'bg-gray-900' : ''}
                 `}
               />
             );
